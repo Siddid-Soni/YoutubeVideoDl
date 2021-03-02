@@ -1,0 +1,59 @@
+<TextInput>
+    font_size: 20
+
+<Label>
+    font_size: 20
+
+<MyLayout>
+    id: grid
+    rows: 5
+    padding:15
+    spacing:10
+    BoxLayout:
+        Label:
+            text: "Youtube Video Downloader"
+            font_size: 25
+
+    BoxLayout:
+        Label:
+            text: "video Link: "
+
+        TextInput:
+            id: link
+            multiline: False
+
+    BoxLayout:
+        Label:
+            text: "Download Format:"
+
+    BoxLayout:
+        Label:
+            text: 'Video'
+        CheckBox:
+            id:ch2
+            group: 'Format'
+            background_radio_disabled_down: ''
+            disabled_color: '#0099ff'
+            on_active: root.check_click(self, self.active, 'video')
+            disabled: False
+
+        Label:
+            text: 'Audio'
+        CheckBox:
+            id: ch1
+            group: 'Format'
+            background_radio_disabled_down: ''
+            disabled_color: '#0099ff'
+            on_active: root.check_click(self, self.active, 'audio')
+            disabled: False
+
+    BoxLayout:
+        Button:
+            id:dl
+            text: 'Download'
+            disabled: True
+            on_press: root.download()
+
+
+
+
