@@ -7,7 +7,7 @@ block_cipher = None
 a = Analysis(['main.py'],
              pathex=['C:\\Users\\Siddid\\source\\KivyProj\\YtubeDl'],
              binaries=[],
-             datas=[('ffmpeg-win-2.2.2/*.*', 'ffmpeg-win-2.2.2'),('design.kv', '.')],
+             datas=[('ffmpeg/bin/ffmpeg.exe', 'ffmpeg/bin'),('design.kv', '.')],
              hiddenimports=[],
              hookspath=[],
              runtime_hooks=[],
@@ -27,7 +27,7 @@ exe = EXE(pyz,
           bootloader_ignore_signals=False,
           strip=False,
           upx=True,
-          console=False )
+          console=True )
 coll = COLLECT(exe,
                a.binaries,
                a.zipfiles,
